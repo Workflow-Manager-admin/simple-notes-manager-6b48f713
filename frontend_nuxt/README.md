@@ -1,6 +1,27 @@
-# Nuxt Minimal Starter
+# Nuxt Notes App
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+A simple, modern, minimalistic notes app.
+- Built in Nuxt 3 + Vue 3
+- Uses Supabase for backend data store
+
+## Features
+
+- Create, edit, delete notes
+- View notes in a responsive grid
+- Modern, minimal and responsive UI
+
+## Supabase Table Schema
+
+You must create a `notes` table in Supabase:
+
+| Field      | Type       | Special           |
+|------------|------------|-------------------|
+| id         | int8       | Primary key, auto inc, not null |
+| title      | text       | not null          |
+| content    | text       | not null          |
+| created_at | timestamp  | default: now()    |
+
+The app expects your Supabase project URL/key in `useSupabase.ts` (see code).
 
 ## Setup
 
